@@ -1,0 +1,4 @@
+C:\Users\Admin\Documents\GitHub\obligatorioP2\Clases\obj\Debug\netstandard2.0\Clases.csprojAssemblyReference.cache
+C:\Users\Admin\Documents\GitHub\obligatorioP2\Clases\obj\Debug\netstandard2.0\Clases.AssemblyInfoInputs.cache
+C:\Users\Admin\Documents\GitHub\obligatorioP2\Clases\obj\Debug\netstandard2.0\Clases.AssemblyInfo.cs
+C:\Users\Admin\Documents\GitHub\obligatorioP2\Clases\obj\Debug\netstandard2.0\Clases.csproj.CoreCompileInputs.cache

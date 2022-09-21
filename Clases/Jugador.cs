@@ -4,7 +4,9 @@ using System.Text;
 
 namespace Clases
 {
-    class Jugador
+    public class Jugador
     {
+       
+        
     }
 }
