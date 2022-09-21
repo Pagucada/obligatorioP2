@@ -7,6 +7,7 @@ namespace obligatorioCodFuente
         static void Main(string[] args)
         {
             Console.WriteLine("Cambio 1");
+            Console.WriteLine("holis");
         }
     }
 }
