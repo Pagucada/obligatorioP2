@@ -1,4 +1,5 @@
 ﻿using System;
+using Clases;
 
 namespace obligatorioCodFuente
 {
@@ -8,6 +9,8 @@ namespace obligatorioCodFuente
         {
             Console.WriteLine("Cambio 1");
             Console.WriteLine("holis");
+            Class1 hola = new Class1();
+            hola.nombre = "sdakhj";
         }
     }
 }
