@@ -1,5 +1,5 @@
 ﻿using System;
-using Clases;
+
 namespace Clases
 {
     public class Class1
