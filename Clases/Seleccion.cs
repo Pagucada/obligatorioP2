@@ -8,7 +8,7 @@ namespace Clases
     {
         private Pais Pais_ { get; set; }
         private List<Jugador> Jugadores { get; set; } = new List<Jugador>();
-        public void ValidarDatos()
+        public bool ValidarDatos()
         {
             throw new NotImplementedException();
         }

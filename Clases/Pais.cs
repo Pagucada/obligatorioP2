@@ -14,7 +14,7 @@ namespace Clases
         
         
         
-        public void ValidarDatos()
+        public bool ValidarDatos()
         {
             throw new NotImplementedException();
         }
