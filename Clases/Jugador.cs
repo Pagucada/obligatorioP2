@@ -7,7 +7,7 @@ namespace Clases
     public class Jugador : IValidacion
     {
         private int Id { get; set; }
-        private int UltimoId { get; set; }
+        private int UltimoId { get; set; } = 1;
         private string NombreCompleto { get; set; }
         private string NumCamiseta { get; set; }
         private DateTime FechaNacimiento { get; set; }
