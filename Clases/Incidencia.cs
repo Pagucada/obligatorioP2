@@ -6,5 +6,6 @@ namespace Clases
 {
     class Incidencia
     {
+        public EnumIncidencia Tipo {get;set;}
     }
 }

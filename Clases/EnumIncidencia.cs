@@ -6,5 +6,8 @@ namespace Clases
 {
     enum EnumIncidencia
     {
+        Roja = 1,
+        Amarilla = 2,
+        Gol = 3
     }
 }
