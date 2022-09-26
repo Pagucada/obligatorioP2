@@ -7,7 +7,7 @@ namespace obligatorioCodFuente
     {
         static void Main(string[] args)
         {
-            
+        
         }
     }
 }

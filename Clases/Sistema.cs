@@ -16,7 +16,9 @@ namespace Clases
 
         private Sistema()
         {
-            //precarga
+            PrecargaJugadores();
+            PrecargaPaises();
+            PrecargaSelecciones();
         }
 
         public Sistema getInstancia() { 
@@ -25,6 +27,39 @@ namespace Clases
                 Instancia = new Sistema();
             }
             return Instancia;
+        }
+
+
+        private void PrecargaPaises()
+        {
+
+        }
+        private void PrecargaJugadores()
+        {
+
+        }
+        private void PrecargaSelecciones()
+        {
+
+        }
+
+
+
+        private void AltaJugador()
+        {
+
+        }
+        private void AltaPais()
+        {
+
+        }
+        private void AltaSeleccion() 
+        { 
+
+        }
+        private void AltaPartido()
+        {
+
         }
 
     }
