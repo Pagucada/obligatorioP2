@@ -4,7 +4,8 @@ using System.Text;
 
 namespace Clases
 {
-    class PartidoGrupo
+    class PartidoGrupo:Partido
     {
+        public NombresGrupos NombreGrupo { get; set; }
     }
 }
