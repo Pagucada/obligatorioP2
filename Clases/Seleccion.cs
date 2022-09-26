@@ -4,7 +4,17 @@ using System.Text;
 
 namespace Clases
 {
-    class Seleccion
+    class Seleccion : IValidacion
     {
+       
+        
+        
+        
+        
+        
+        public void ValidarDatos()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

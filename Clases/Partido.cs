@@ -4,7 +4,16 @@ using System.Text;
 
 namespace Clases
 {
-    class Partido
+    class Partido : IValidacion
     {
+        
+        
+        
+        
+        
+        public void ValidarDatos()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
