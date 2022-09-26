@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "D9WCTXeKwou9QjQ8Ot5g0KfsTm/3KDJPP8R8l0L4spgLsN2p0sKf12cHN8AEOisna2wpv1B5FdxZ+LuV9mMnFA==",
+  "dgSpecHash": "QR8kk6//vPhT7xzvQ94psbYcjBgrwGXz6cAhpQzL9Vke9L/7D1g1C/AVBPkVn1N0eCrL7M1uVFCVikmhvTqffA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Nacho\\OneDrive\\Documentos\\GitHub\\obligatorioP2\\Clases\\Clases.csproj",
+  "projectFilePath": "C:\\Users\\Admin\\Documents\\GitHub\\obligatorioP2\\Clases\\Clases.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Nacho\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
-    "C:\\Users\\Nacho\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+    "C:\\Users\\Admin\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
   ],
   "logs": []
 }
