@@ -4,11 +4,7 @@ using System.Text;
 
 namespace Clases
 {
-    public interface IValidacion
+    enum NombresGrupos
     {
-
-
-         void ValidarDatos();
-        
     }
 }

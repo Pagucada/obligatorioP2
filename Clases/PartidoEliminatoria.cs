@@ -4,11 +4,7 @@ using System.Text;
 
 namespace Clases
 {
-    public interface IValidacion
+    class PartidoEliminatoria
     {
-
-
-         void ValidarDatos();
-        
     }
 }

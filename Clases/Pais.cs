@@ -4,7 +4,16 @@ using System.Text;
 
 namespace Clases
 {
-    class Pais
+    class Pais : IValidacion
     {
+        
+        
+        
+        
+        
+        public void ValidarDatos()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
