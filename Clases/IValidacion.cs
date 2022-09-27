@@ -8,7 +8,7 @@ namespace Clases
     {
 
 
-         bool ValidarDatos();
+         void ValidarDatos();
         
     }
 }

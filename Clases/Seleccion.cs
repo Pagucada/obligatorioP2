@@ -8,9 +8,12 @@ namespace Clases
     {
         private Pais Pais_ { get; set; }
         private List<Jugador> Jugadores { get; set; } = new List<Jugador>();
-        public bool ValidarDatos()
+        public void ValidarDatos()
         {
-            throw new NotImplementedException();
+            if (Pais_ == null || Jugadores.Count < 11)
+            {
+                throw new Exception("El país falta o la cantidad de jugadores es menor que 11.");
+            }
         }
     }
 }

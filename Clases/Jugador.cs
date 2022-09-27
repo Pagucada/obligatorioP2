@@ -11,7 +11,12 @@ namespace Clases
         private string NombreCompleto { get; set; }
         private string NumCamiseta { get; set; }
         private DateTime FechaNacimiento { get; set; }
-        
+        private string Altura { get; set; }
+        private string PieHabil { get; set; }
+        private int ValorMercado { get; set; }
+        private Pais PaisPerteneciente { get; set; }
+        private string Puesto { get; set; }
+        private static int MontoCategoria { get; set; }
 
 
 
@@ -19,9 +24,16 @@ namespace Clases
 
 
 
-        public bool ValidarDatos()
+
+
+        public void ValidarDatos()
         {
-            throw new NotImplementedException();
+            if (String.IsNullOrEmpty(NombreCompleto) || String.IsNullOrEmpty(NumCamiseta) || FechaNacimiento == null
+                || FechaNacimiento == null || String.IsNullOrEmpty(Altura) || String.IsNullOrEmpty(PieHabil)
+                || ValorMercado <= 0 || PaisPerteneciente == null || String.IsNullOrEmpty(Puesto))
+            {
+                throw new Exception("Faltan valores por ingresar.");
+            }
         }
     }
 }
