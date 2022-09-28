@@ -24,7 +24,13 @@ namespace Clases
             }
         }
 
-
+        public void AgregarJugador(Jugador j)
+        {
+            if (!Jugadores.Contains(j))
+            {
+                Jugadores.Add(j);
+            }
+        }
 
         public override bool Equals(object obj)
         {

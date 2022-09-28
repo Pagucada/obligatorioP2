@@ -7,8 +7,8 @@ namespace Clases
     public class Sistema
     {
         private static Sistema Instancia = null;
-        public List<Jugador> Jugadores = new List<Jugador>();
-        private List<Seleccion> Selecciones = new List<Seleccion>();
+        private List<Jugador> Jugadores = new List<Jugador>();
+        public List<Seleccion> Selecciones = new List<Seleccion>();
         private List<Pais> Paises = new List<Pais>();
         private List<Partido> Partidos = new List<Partido>();
         private List<Resenia> Resenias = new List<Resenia>();
@@ -976,8 +976,36 @@ namespace Clases
         private void PrecargaSelecciones()
         {
 
+            //Contamos con países y jugadores, la seleccion debe armar para cada pais una seleccion
+            foreach (Pais p in Paises)
+            {
+                // 1 - Se crea una seleccion por cada país en la lista.
+                Seleccion selNueva = new Seleccion(p);
+                List<Jugador> misJugadores = JugadoresDe(p);
+                foreach (Jugador j in misJugadores)
+                {
+                    selNueva.AgregarJugador(j);
+                }
+                AltaSeleccion(selNueva);
+            }
         }
 
+
+
+
+        private List<Jugador> JugadoresDe(Pais p)
+        {
+            List<Jugador> _misJugadores = new List<Jugador>();
+            foreach (Jugador j in Jugadores)
+            {
+
+                if (j.PaisPerteneciente.Nombre.Equals(p.Nombre))
+                {
+                    _misJugadores.Add(j);
+                }
+            }
+            return _misJugadores;
+        }
 
         public void AltaPeriodista(Periodista p)
         {
