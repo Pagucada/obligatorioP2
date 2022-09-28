@@ -7,21 +7,21 @@ namespace Clases
     public class Jugador : IValidacion
     {
         public int Id { get; set; }
-        public static int UltimoId { get; set; } = 1;
         public string NombreCompleto { get; set; }
         public string NumCamiseta { get; set; }
         public DateTime FechaNacimiento { get; set; }
-        public string Altura { get; set; }
+        public double Altura { get; set; } = 0;
         public string PieHabil { get; set; }
         public int ValorMercado { get; set; }
+        public string Moneda { get; set; }
         public Pais PaisPerteneciente { get; set; }
         public string Puesto { get; set; }
         public static int MontoCategoria { get; set; }
 
 
-        public Jugador(string nombreCompleto,string numCamiseta, DateTime fechaNacimiento, string altura, string pieHabil, int valorMercado, Pais pais,string puesto)
+        public Jugador(int id, string numCamiseta, string nombreCompleto, DateTime fechaNacimiento, double altura, string pieHabil, int valorMercado,string moneda, Pais pais,string puesto)
         {
-            Id = UltimoId++;
+            Id = id;
             NombreCompleto = nombreCompleto;
             NumCamiseta = numCamiseta; 
             FechaNacimiento = fechaNacimiento;
@@ -30,6 +30,7 @@ namespace Clases
             ValorMercado = valorMercado;
             PaisPerteneciente = pais;
             Puesto = puesto;
+            Moneda = moneda;
         }
 
 
@@ -40,10 +41,10 @@ namespace Clases
         public void ValidarDatos()
         {
             if (String.IsNullOrEmpty(NombreCompleto) || String.IsNullOrEmpty(NumCamiseta)
-                || FechaNacimiento == null || String.IsNullOrEmpty(Altura) || String.IsNullOrEmpty(PieHabil)
+                || FechaNacimiento == DateTime.MinValue || Altura == 0 || String.IsNullOrEmpty(PieHabil)
                 || ValorMercado <= 0 || PaisPerteneciente == null || String.IsNullOrEmpty(Puesto))
             {
-                throw new Exception("Faltan valores por ingresar.");
+                throw new Exception("Faltan valores por ingresar."+NombreCompleto);
             }
         }
 

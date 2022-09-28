@@ -11,7 +11,7 @@ namespace Clases
         public string CodAlpha { get; set; }
         public string Nombre { get; set; }
 
-        public Pais(string codAlpha, string nombre)
+        public Pais(string nombre, string codAlpha)
         {
             Id = UltimoId++;
             CodAlpha = codAlpha;

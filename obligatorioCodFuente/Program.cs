@@ -7,9 +7,14 @@ namespace obligatorioCodFuente
     {
         static void Main(string[] args) 
         {
-            Sistema sistema = Sistema.getInstancia();
+            Sistema sistema = Sistema.GetInstancia();
+           foreach(Jugador j in sistema.Jugadores)
+            {
+                Console.WriteLine(j.NombreCompleto);
+                
+            
+            }
 
-            sistema.AltaPeriodista(new Periodista("Lucas","Giordano","olahol@a","abcd1234") ) ;
         }
         
         
