@@ -2,6 +2,7 @@ C:\Users\Admin\Documents\GitHub\obligatorioP2\obligatorioCodFuente\obj\Debug\net
 C:\Users\Admin\Documents\GitHub\obligatorioP2\obligatorioCodFuente\obj\Debug\netcoreapp3.1\obligatorioCodFuente.AssemblyInfoInputs.cache
 C:\Users\Admin\Documents\GitHub\obligatorioP2\obligatorioCodFuente\obj\Debug\netcoreapp3.1\obligatorioCodFuente.AssemblyInfo.cs
 C:\Users\Admin\Documents\GitHub\obligatorioP2\obligatorioCodFuente\obj\Debug\netcoreapp3.1\obligatorioCodFuente.csproj.CoreCompileInputs.cache
+<<<<<<< Updated upstream
 C:\Users\Admin\Documents\GitHub\obligatorioP2\obligatorioCodFuente\bin\Debug\netcoreapp3.1\obligatorioCodFuente.exe
 C:\Users\Admin\Documents\GitHub\obligatorioP2\obligatorioCodFuente\bin\Debug\netcoreapp3.1\obligatorioCodFuente.deps.json
 C:\Users\Admin\Documents\GitHub\obligatorioP2\obligatorioCodFuente\bin\Debug\netcoreapp3.1\obligatorioCodFuente.runtimeconfig.json
@@ -14,3 +15,10 @@ C:\Users\Admin\Documents\GitHub\obligatorioP2\obligatorioCodFuente\obj\Debug\net
 C:\Users\Admin\Documents\GitHub\obligatorioP2\obligatorioCodFuente\obj\Debug\netcoreapp3.1\obligatorioCodFuente.dll
 C:\Users\Admin\Documents\GitHub\obligatorioP2\obligatorioCodFuente\obj\Debug\netcoreapp3.1\obligatorioCodFuente.pdb
 C:\Users\Admin\Documents\GitHub\obligatorioP2\obligatorioCodFuente\obj\Debug\netcoreapp3.1\obligatorioCodFuente.genruntimeconfig.cache
+=======
+C:\Users\Nacho\OneDrive\Documentos\GitHub\obligatorioP2\obligatorioCodFuente\obj\Debug\netcoreapp3.1\obligatorioCodFuente.csproj.AssemblyReference.cache
+C:\Users\Nacho\OneDrive\Documentos\GitHub\obligatorioP2\obligatorioCodFuente\obj\Debug\netcoreapp3.1\obligatorioCodFuente.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Nacho\OneDrive\Documentos\GitHub\obligatorioP2\obligatorioCodFuente\obj\Debug\netcoreapp3.1\obligatorioCodFuente.AssemblyInfoInputs.cache
+C:\Users\Nacho\OneDrive\Documentos\GitHub\obligatorioP2\obligatorioCodFuente\obj\Debug\netcoreapp3.1\obligatorioCodFuente.AssemblyInfo.cs
+C:\Users\Nacho\OneDrive\Documentos\GitHub\obligatorioP2\obligatorioCodFuente\obj\Debug\netcoreapp3.1\obligatorioCodFuente.csproj.CoreCompileInputs.cache
+>>>>>>> Stashed changes

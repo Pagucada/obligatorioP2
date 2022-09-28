@@ -2,8 +2,16 @@ C:\Users\Admin\Documents\GitHub\obligatorioP2\Clases\obj\Debug\netstandard2.0\Cl
 C:\Users\Admin\Documents\GitHub\obligatorioP2\Clases\obj\Debug\netstandard2.0\Clases.AssemblyInfoInputs.cache
 C:\Users\Admin\Documents\GitHub\obligatorioP2\Clases\obj\Debug\netstandard2.0\Clases.AssemblyInfo.cs
 C:\Users\Admin\Documents\GitHub\obligatorioP2\Clases\obj\Debug\netstandard2.0\Clases.csproj.CoreCompileInputs.cache
+<<<<<<< Updated upstream
 C:\Users\Admin\Documents\GitHub\obligatorioP2\Clases\bin\Debug\netstandard2.0\Clases.deps.json
 C:\Users\Admin\Documents\GitHub\obligatorioP2\Clases\bin\Debug\netstandard2.0\Clases.dll
 C:\Users\Admin\Documents\GitHub\obligatorioP2\Clases\bin\Debug\netstandard2.0\Clases.pdb
 C:\Users\Admin\Documents\GitHub\obligatorioP2\Clases\obj\Debug\netstandard2.0\Clases.dll
 C:\Users\Admin\Documents\GitHub\obligatorioP2\Clases\obj\Debug\netstandard2.0\Clases.pdb
+=======
+C:\Users\Nacho\OneDrive\Documentos\GitHub\obligatorioP2\Clases\obj\Debug\netstandard2.0\Clases.csproj.AssemblyReference.cache
+C:\Users\Nacho\OneDrive\Documentos\GitHub\obligatorioP2\Clases\obj\Debug\netstandard2.0\Clases.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Nacho\OneDrive\Documentos\GitHub\obligatorioP2\Clases\obj\Debug\netstandard2.0\Clases.AssemblyInfoInputs.cache
+C:\Users\Nacho\OneDrive\Documentos\GitHub\obligatorioP2\Clases\obj\Debug\netstandard2.0\Clases.AssemblyInfo.cs
+C:\Users\Nacho\OneDrive\Documentos\GitHub\obligatorioP2\Clases\obj\Debug\netstandard2.0\Clases.csproj.CoreCompileInputs.cache
+>>>>>>> Stashed changes
