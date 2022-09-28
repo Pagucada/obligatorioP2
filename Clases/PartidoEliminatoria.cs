@@ -4,11 +4,19 @@ using System.Text;
 
 namespace Clases
 {
-    class PartidoEliminatoria:Partido
+    public class PartidoEliminatoria:Partido
     {
-        public bool Ganador { get; set; }
+        public string Ganador { get; set; }
         public bool Alargue { get; set; }
         public bool TandaPenales { get; set; }
         public Etapa Etapa { get; set; }
+
+
+        public PartidoEliminatoria(Seleccion seleccion1, Seleccion seleccion2, DateTime fechaHora, bool finalizado,bool alargue,bool tandaPenales,Etapa etapa) : base(seleccion1,seleccion2,fechaHora,finalizado)
+        {
+            Alargue = alargue;
+            TandaPenales = tandaPenales;
+            Etapa = etapa;
+        }
     }
 }

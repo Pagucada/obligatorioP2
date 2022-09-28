@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Clases
 {
-    enum NombresGrupos
+    public enum NombresGrupos
     {
         A=1,
         B=2,

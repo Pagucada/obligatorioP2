@@ -4,14 +4,15 @@ using System.Text;
 
 namespace Clases
 {
-    class Sistema
+    public class Sistema
     {
         private static Sistema Instancia = null;
         private List<Jugador> Jugadores = new List<Jugador>();
         private List<Seleccion> Selecciones = new List<Seleccion>();
         private List<Pais> Paises = new List<Pais>();
         private List<Partido> Partidos = new List<Partido>();
-        private List<Resenia> Resenia = new List<Resenia>();
+        private List<Resenia> Resenias = new List<Resenia>();
+        private List<Periodista> Periodistas = new List<Periodista>();
 
 
         private Sistema()
@@ -21,9 +22,9 @@ namespace Clases
             PrecargaSelecciones();
         }
 
-        public Sistema getInstancia() { 
+        public static Sistema getInstancia() { 
         if(Instancia == null)
-            {
+           {
                 Instancia = new Sistema();
             }
             return Instancia;
@@ -44,21 +45,80 @@ namespace Clases
         }
 
 
-
-        private void AltaJugador()
+        public void AltaPeriodista(Periodista p)
         {
+            try
+            {
+                p.ValidarDatos();
 
+                if (!Periodistas.Contains(p))
+                    {
+                        Periodistas.Add(p);
+                    }
+
+            }
+            catch(Exception)
+            {
+                throw;
+            }
         }
-        private void AltaPais()
+        public void AltaJugador(Jugador j)
         {
+            try
+            {
+                j.ValidarDatos();
+                if (!Jugadores.Contains(j))
+                {
+                    Jugadores.Add(j);
+                }
+            }
+            catch (Exception)
+            {
 
+                throw;
+            }
+            
         }
-        private void AltaSeleccion() 
-        { 
-
-        }
-        private void AltaPartido()
+        public void AltaPais(Pais p)
         {
+            try
+            {
+                p.ValidarDatos();
+                if (!Paises.Contains(p))
+                {
+                    Paises.Add(p);
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+        public void AltaSeleccion(Seleccion s) 
+        {
+            s.ValidarDatos();
+            if (!Selecciones.Contains(s))
+            {
+                Selecciones.Add(s);
+            }
+        }
+        public void AltaPartido(Partido p)
+        {
+            try
+            {
+                p.ValidarDatos();
+                if (!Partidos.Contains(p))
+                {
+                    Partidos.Add(p);
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            
 
         }
 

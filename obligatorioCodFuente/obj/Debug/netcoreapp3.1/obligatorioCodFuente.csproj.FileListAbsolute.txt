@@ -2,3 +2,15 @@ C:\Users\Admin\Documents\GitHub\obligatorioP2\obligatorioCodFuente\obj\Debug\net
 C:\Users\Admin\Documents\GitHub\obligatorioP2\obligatorioCodFuente\obj\Debug\netcoreapp3.1\obligatorioCodFuente.AssemblyInfoInputs.cache
 C:\Users\Admin\Documents\GitHub\obligatorioP2\obligatorioCodFuente\obj\Debug\netcoreapp3.1\obligatorioCodFuente.AssemblyInfo.cs
 C:\Users\Admin\Documents\GitHub\obligatorioP2\obligatorioCodFuente\obj\Debug\netcoreapp3.1\obligatorioCodFuente.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Documents\GitHub\obligatorioP2\obligatorioCodFuente\bin\Debug\netcoreapp3.1\obligatorioCodFuente.exe
+C:\Users\Admin\Documents\GitHub\obligatorioP2\obligatorioCodFuente\bin\Debug\netcoreapp3.1\obligatorioCodFuente.deps.json
+C:\Users\Admin\Documents\GitHub\obligatorioP2\obligatorioCodFuente\bin\Debug\netcoreapp3.1\obligatorioCodFuente.runtimeconfig.json
+C:\Users\Admin\Documents\GitHub\obligatorioP2\obligatorioCodFuente\bin\Debug\netcoreapp3.1\obligatorioCodFuente.runtimeconfig.dev.json
+C:\Users\Admin\Documents\GitHub\obligatorioP2\obligatorioCodFuente\bin\Debug\netcoreapp3.1\obligatorioCodFuente.dll
+C:\Users\Admin\Documents\GitHub\obligatorioP2\obligatorioCodFuente\bin\Debug\netcoreapp3.1\obligatorioCodFuente.pdb
+C:\Users\Admin\Documents\GitHub\obligatorioP2\obligatorioCodFuente\bin\Debug\netcoreapp3.1\Clases.dll
+C:\Users\Admin\Documents\GitHub\obligatorioP2\obligatorioCodFuente\bin\Debug\netcoreapp3.1\Clases.pdb
+C:\Users\Admin\Documents\GitHub\obligatorioP2\obligatorioCodFuente\obj\Debug\netcoreapp3.1\obligatorioCodFuente.csproj.CopyComplete
+C:\Users\Admin\Documents\GitHub\obligatorioP2\obligatorioCodFuente\obj\Debug\netcoreapp3.1\obligatorioCodFuente.dll
+C:\Users\Admin\Documents\GitHub\obligatorioP2\obligatorioCodFuente\obj\Debug\netcoreapp3.1\obligatorioCodFuente.pdb
+C:\Users\Admin\Documents\GitHub\obligatorioP2\obligatorioCodFuente\obj\Debug\netcoreapp3.1\obligatorioCodFuente.genruntimeconfig.cache

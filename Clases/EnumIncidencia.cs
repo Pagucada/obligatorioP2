@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Clases
 {
-    enum EnumIncidencia
+    public enum EnumIncidencia
     {
         Roja = 1,
         Amarilla = 2,
