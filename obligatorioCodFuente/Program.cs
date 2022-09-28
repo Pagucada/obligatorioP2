@@ -11,10 +11,8 @@ namespace obligatorioCodFuente
            foreach(Jugador j in sistema.Jugadores)
             {
                 Console.WriteLine(j.NombreCompleto);
-                
-            
             }
-
+            Console.ReadKey();
         }
         
         

@@ -22,3 +22,15 @@ C:\Users\Nacho\OneDrive\Documentos\GitHub\obligatorioP2\obligatorioCodFuente\obj
 C:\Users\Nacho\OneDrive\Documentos\GitHub\obligatorioP2\obligatorioCodFuente\obj\Debug\netcoreapp3.1\obligatorioCodFuente.AssemblyInfo.cs
 C:\Users\Nacho\OneDrive\Documentos\GitHub\obligatorioP2\obligatorioCodFuente\obj\Debug\netcoreapp3.1\obligatorioCodFuente.csproj.CoreCompileInputs.cache
 >>>>>>> Stashed changes
+C:\Users\Nacho\OneDrive\Documentos\GitHub\obligatorioP2\obligatorioCodFuente\bin\Debug\netcoreapp3.1\obligatorioCodFuente.exe
+C:\Users\Nacho\OneDrive\Documentos\GitHub\obligatorioP2\obligatorioCodFuente\bin\Debug\netcoreapp3.1\obligatorioCodFuente.deps.json
+C:\Users\Nacho\OneDrive\Documentos\GitHub\obligatorioP2\obligatorioCodFuente\bin\Debug\netcoreapp3.1\obligatorioCodFuente.runtimeconfig.json
+C:\Users\Nacho\OneDrive\Documentos\GitHub\obligatorioP2\obligatorioCodFuente\bin\Debug\netcoreapp3.1\obligatorioCodFuente.runtimeconfig.dev.json
+C:\Users\Nacho\OneDrive\Documentos\GitHub\obligatorioP2\obligatorioCodFuente\bin\Debug\netcoreapp3.1\obligatorioCodFuente.dll
+C:\Users\Nacho\OneDrive\Documentos\GitHub\obligatorioP2\obligatorioCodFuente\bin\Debug\netcoreapp3.1\obligatorioCodFuente.pdb
+C:\Users\Nacho\OneDrive\Documentos\GitHub\obligatorioP2\obligatorioCodFuente\bin\Debug\netcoreapp3.1\Clases.dll
+C:\Users\Nacho\OneDrive\Documentos\GitHub\obligatorioP2\obligatorioCodFuente\bin\Debug\netcoreapp3.1\Clases.pdb
+C:\Users\Nacho\OneDrive\Documentos\GitHub\obligatorioP2\obligatorioCodFuente\obj\Debug\netcoreapp3.1\obligatorioCodFuente.csproj.CopyComplete
+C:\Users\Nacho\OneDrive\Documentos\GitHub\obligatorioP2\obligatorioCodFuente\obj\Debug\netcoreapp3.1\obligatorioCodFuente.dll
+C:\Users\Nacho\OneDrive\Documentos\GitHub\obligatorioP2\obligatorioCodFuente\obj\Debug\netcoreapp3.1\obligatorioCodFuente.pdb
+C:\Users\Nacho\OneDrive\Documentos\GitHub\obligatorioP2\obligatorioCodFuente\obj\Debug\netcoreapp3.1\obligatorioCodFuente.genruntimeconfig.cache
