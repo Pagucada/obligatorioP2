@@ -77,7 +77,39 @@ namespace Clases
             }      
            
         }
+        public List<Jugador> GetJugadores()
+        {
+            List<Jugador> jugadores = new List<Jugador>();
 
+            foreach(Jugador j in Jugadores)
+            {
+                jugadores.Add(j);
+            }
+            return jugadores;
+        }
+        public List<Partido> GetPartidosJugador(int idJugador)
+        {
+            List<Partido> PartidosJugador = new List<Partido>();
+
+            foreach(Partido p in Partidos)
+            {
+                foreach(Jugador j in p.Seleccion1.Jugadores)
+                {
+                    if (j.Id.Equals(idJugador))
+                    {
+                        PartidosJugador.Add(p);
+                    }
+                }
+                foreach (Jugador j in p.Seleccion2.Jugadores)
+                {
+                    if (j.Id.Equals(idJugador))
+                    {
+                        PartidosJugador.Add(p);
+                    }
+                }
+            }
+            return PartidosJugador;
+        }
         private Pais GetPais(string nombre)
         {
             foreach (Pais pais in Paises)
@@ -90,7 +122,7 @@ namespace Clases
             }
             return null;
         }
-        public Seleccion GetSeleccion(string nombrePais)
+        private Seleccion GetSeleccion(string nombrePais)
         {
             foreach(Seleccion seleccion in Selecciones)
             {
@@ -1009,6 +1041,31 @@ namespace Clases
         }
         private void PrecargaPartidos()
         {
+            //Partido de eliminatorias
+
+            AltaPartido(new PartidoEliminatoria(GetSeleccion("Catar"), GetSeleccion("Inglaterra"), DateTime.Parse("2022,11,29"), true, true, Etapa.octavos));
+            AltaPartido(new PartidoEliminatoria(GetSeleccion("Ecuador"), GetSeleccion("Gales"), DateTime.Parse("2022,11,30"), false, false, Etapa.octavos));
+            AltaPartido(new PartidoEliminatoria(GetSeleccion("Argentina"), GetSeleccion("Australia"), DateTime.Parse("2022,12,1"), true, true, Etapa.octavos));
+            AltaPartido(new PartidoEliminatoria(GetSeleccion("Polonia"), GetSeleccion("Francia"), DateTime.Parse("2022,12,1"), true, false, Etapa.octavos));
+
+            //Registro de incidencias eliminatorias
+
+            foreach(PartidoEliminatoria partidoE in Partidos)
+            {
+              
+                
+                if (partidoE.TandaPenales == true)
+                {
+                    Random rnd = new Random();
+                    partidoE.AltaIncidencia(new Incidencia(EnumIncidencia.Gol, rnd.Next(1, 120).ToString(), partidoE.Seleccion1.Jugadores[rnd.Next(1, 11)]));
+                    partidoE.AltaIncidencia(new Incidencia(EnumIncidencia.Gol,"-1", partidoE.Seleccion2.Jugadores[2]));
+                    partidoE.AltaIncidencia(new Incidencia(EnumIncidencia.Gol, "-1", partidoE.Seleccion2.Jugadores[3]));
+                    partidoE.AltaIncidencia(new Incidencia(EnumIncidencia.Gol, "-1", partidoE.Seleccion2.Jugadores[4]));
+                    partidoE.AltaIncidencia(new Incidencia(EnumIncidencia.Gol, "-1", partidoE.Seleccion1.Jugadores[2]));
+                    partidoE.AltaIncidencia(new Incidencia(EnumIncidencia.Gol, "-1", partidoE.Seleccion1.Jugadores[3]));
+                }
+            }
+
             //Partido de grupos
             AltaPartido(new PartidoGrupo(GetSeleccion("Catar"), GetSeleccion("Ecuador"), DateTime.Parse("2022,11,21"), NombresGrupos.A));
             AltaPartido(new PartidoGrupo(GetSeleccion("Catar"), GetSeleccion("Senegal"), DateTime.Parse("2022,11,22"), NombresGrupos.A));
@@ -1022,26 +1079,33 @@ namespace Clases
             AltaPartido(new PartidoGrupo(GetSeleccion("Irán"), GetSeleccion("Estados Unidos"), DateTime.Parse("2022,11,24"), NombresGrupos.B));
             AltaPartido(new PartidoGrupo(GetSeleccion("Estados Unidos"), GetSeleccion("Gales"), DateTime.Parse("2022,11,25"), NombresGrupos.B));
             AltaPartido(new PartidoGrupo(GetSeleccion("Irán"), GetSeleccion("Gales"), DateTime.Parse("2022,11,26"), NombresGrupos.B));
+            AltaPartido(new PartidoGrupo(GetSeleccion("Argentina"), GetSeleccion("Arabia Saudita"), DateTime.Parse("2022,11,21"), NombresGrupos.C));
+            AltaPartido(new PartidoGrupo(GetSeleccion("Argentina"), GetSeleccion("México"), DateTime.Parse("2022,11,22"), NombresGrupos.C));
+            AltaPartido(new PartidoGrupo(GetSeleccion("Argentina"), GetSeleccion("Polonia"), DateTime.Parse("2022,11,23"), NombresGrupos.C));
+            AltaPartido(new PartidoGrupo(GetSeleccion("Arabia Saudita"), GetSeleccion("México"), DateTime.Parse("2022,11,24"), NombresGrupos.C));
+            AltaPartido(new PartidoGrupo(GetSeleccion("Arabia Saudita"), GetSeleccion("Polonia"), DateTime.Parse("2022,11,25"), NombresGrupos.C));
+            AltaPartido(new PartidoGrupo(GetSeleccion("Polonia"), GetSeleccion("México"), DateTime.Parse("2022,11,26"), NombresGrupos.C));
+            AltaPartido(new PartidoGrupo(GetSeleccion("Francia"), GetSeleccion("Dinamarca"), DateTime.Parse("2022,11,21"), NombresGrupos.D));
+            AltaPartido(new PartidoGrupo(GetSeleccion("Francia"), GetSeleccion("Australia"), DateTime.Parse("2022,11,22"), NombresGrupos.D));
+            AltaPartido(new PartidoGrupo(GetSeleccion("Francia"), GetSeleccion("Túnez"), DateTime.Parse("2022,11,23"), NombresGrupos.D));
+            AltaPartido(new PartidoGrupo(GetSeleccion("Dinamarca"), GetSeleccion("Australia"), DateTime.Parse("2022,11,24"), NombresGrupos.D));
+            AltaPartido(new PartidoGrupo(GetSeleccion("Dinamarca"), GetSeleccion("Túnez"), DateTime.Parse("2022,11,25"), NombresGrupos.D));
+            AltaPartido(new PartidoGrupo(GetSeleccion("Túnez"), GetSeleccion("Australia"), DateTime.Parse("2022,11,26"), NombresGrupos.D));
 
 
-            //Registro de incidencias grupos
+            //Registro de incidencias generales
 
-            foreach (PartidoGrupo partido in Partidos)
+            foreach (Partido partido in Partidos)
             {
-                partido.Incidencias.Add(new Incidencia(EnumIncidencia.Amarilla,"86",partido.Seleccion1.Jugadores[3]));
-                partido.Incidencias.Add(new Incidencia(EnumIncidencia.Gol, "75", partido.Seleccion2.Jugadores[4]));
-                partido.Incidencias.Add(new Incidencia(EnumIncidencia.Roja, "90", partido.Seleccion1.Jugadores[2]));
+                Random rnd = new Random();
+                partido.AltaIncidencia(new Incidencia(EnumIncidencia.Amarilla,rnd.Next(1,90).ToString(), partido.Seleccion1.Jugadores[rnd.Next(1,11)]));
+                partido.AltaIncidencia(new Incidencia(EnumIncidencia.Gol, rnd.Next(1, 90).ToString(), partido.Seleccion2.Jugadores[rnd.Next(1, 11)]));
+                partido.AltaIncidencia(new Incidencia(EnumIncidencia.Roja, rnd.Next(1, 90).ToString(), partido.Seleccion1.Jugadores[rnd.Next(1, 11)]));
+
             }
 
-            //Partido de eliminatorias
-
-            AltaPartido(new PartidoEliminatoria(GetSeleccion("Catar"), GetSeleccion("Inglaterra"), DateTime.Parse("2022,11,29"), true, true, Etapa.octavos));
-            AltaPartido(new PartidoEliminatoria(GetSeleccion("Ecuador"), GetSeleccion("Gales"), DateTime.Parse("2022,11,29"), true, false, Etapa.octavos));
-
-            //Registro de incidencias eliminatorias
-
             
-           
+
 
         }
 
@@ -1142,6 +1206,7 @@ namespace Clases
             
 
         }
+       
 
     }
 }

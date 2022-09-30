@@ -6,7 +6,7 @@ namespace Clases
 {
     public class PartidoGrupo:Partido
     {
-        private DateTime dateTime;
+       
 
         public NombresGrupos NombreGrupo { get; set; }
 
@@ -22,6 +22,55 @@ namespace Clases
             {
 
             }
+        }
+        public override void AltaIncidencia(Incidencia i)
+        {
+            try
+            {
+                ValidarIncidencia(i);
+                Incidencias.Add(i);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+
+        }
+
+        public override void ValidarIncidencia(Incidencia i)
+        {
+            bool jugadorPertenece = false;
+            if (i.Jugador == null)
+
+            {
+                throw new Exception("El jugador esta vacio");
+
+            }
+            else if (Int32.Parse(i.Minuto) <= -1)
+            {
+                throw new Exception("El valor de minuto no es valido");
+            }
+
+            foreach (Jugador jugador in Seleccion1.Jugadores)
+            {
+                if (jugador.Equals(i.Jugador))
+                {
+                    jugadorPertenece = true;
+                }
+            }
+            foreach (Jugador jugador in Seleccion2.Jugadores)
+            {
+                if (jugador.Equals(i.Jugador))
+                {
+                    jugadorPertenece = true;
+                }
+            }
+            if (jugadorPertenece == false)
+            {
+                throw new Exception("El jugador no pertenece a ninguno de los planteles que juegan el partido");
+            }
+
         }
     }
 }

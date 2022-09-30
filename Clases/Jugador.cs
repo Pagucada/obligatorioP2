@@ -44,7 +44,7 @@ namespace Clases
                 || FechaNacimiento == DateTime.MinValue || Altura == 0 || String.IsNullOrEmpty(PieHabil)
                 || ValorMercado <= 0 || PaisPerteneciente == null || String.IsNullOrEmpty(Puesto))
             {
-                throw new Exception("Faltan valores por ingresar."+NombreCompleto);
+                throw new Exception("Faltan valores por ingresar.");
             }
         }
 
@@ -53,5 +53,6 @@ namespace Clases
         {
             return obj is Jugador jugador && jugador.Id == this.Id;
         }
+
     }
 }
