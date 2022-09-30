@@ -12,7 +12,7 @@ namespace Clases
         public Etapa Etapa { get; set; }
 
 
-        public PartidoEliminatoria(Seleccion seleccion1, Seleccion seleccion2, DateTime fechaHora, bool finalizado,bool alargue,bool tandaPenales,Etapa etapa) : base(seleccion1,seleccion2,fechaHora,finalizado)
+        public PartidoEliminatoria(Seleccion seleccion1, Seleccion seleccion2, DateTime fechaHora,bool alargue,bool tandaPenales,Etapa etapa) : base(seleccion1,seleccion2,fechaHora)
         {
             Alargue = alargue;
             TandaPenales = tandaPenales;

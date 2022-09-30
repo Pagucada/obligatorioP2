@@ -17,16 +17,17 @@ namespace Clases
         public string ResultadoFInal { get; set; } = "Pendiente";
 
 
-        protected Partido(Seleccion seleccion1,Seleccion seleccion2,DateTime fechaHora, bool finalizado)
+        protected Partido(Seleccion seleccion1,Seleccion seleccion2,DateTime fechaHora)
         {
             Id = UltimoId++;
             Seleccion1 = seleccion1;
             Seleccion2 = seleccion2;
             FechaYHora = fechaHora;
-            Finalizado = finalizado;
+         
             //El resultado final no se solicita en esta instancia del obligatorio
         }
 
+       
 
         public void ValidarDatos()
         {
@@ -34,7 +35,7 @@ namespace Clases
             {
                 throw new Exception("Las selecciones no pueden ingresarse vacías.");
             }
-            else if(FechaYHora.Ticks < new DateTime(11,20,2022).Ticks && FechaYHora.Ticks > new DateTime(12, 18, 2022).Ticks)
+            else if(FechaYHora.Ticks < new DateTime(2022,11,20).Ticks || FechaYHora.Ticks > new DateTime(2022,12,18).Ticks)
             {
                 throw new Exception("La fecha está ingresada en un rango que no corresponde.");
             }
