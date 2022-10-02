@@ -33,10 +33,22 @@ namespace obligatorioCodFuente
                 case 3:
                     ListarPartidosDeJugador();
                     break;
+                case 4:
+                    ListarJugadoresExpulsados();
+                    break;
+                case 5:
+                    PartidoConMasGoles();
+                    break;
+                case 6:
+                    ListarJugadoresConGol();
+                    break;
                 default:
+                   
                     break;
             }
         }
+
+       
 
         public static void AgregarPeriodista()
         {
@@ -133,7 +145,7 @@ namespace obligatorioCodFuente
                 }
                 if(encontroJugador && partidosJugador.Count == 0)
                 {
-                    throw new Exception("El jugaor todavia no jugo ningun partido");
+                    throw new Exception("El jugador todavia no jugo ningun partido");
                 }
             
             foreach(Partido p in partidosJugador)
@@ -156,6 +168,115 @@ namespace obligatorioCodFuente
                 Console.Clear();
                 MenuPrincipal();
             }
+
+        }
+        public static void ListarJugadoresExpulsados()
+        {
+            Sistema sistema = Sistema.GetInstancia();
+            Console.Clear();
+            List<Jugador> JugadoresExpulsados = sistema.GetJugadoresExpulsados();
+            JugadoresExpulsados.Sort();
+            try
+            {
+                if(JugadoresExpulsados.Count == 0)
+                {
+                    throw new Exception("No hay registro de jugadores expulsados");
+                }
+
+                foreach(Jugador j in JugadoresExpulsados)
+                {
+                    Console.WriteLine(j.NombreCompleto + " " + j.ValorMercado);
+                }
+            }
+            catch (Exception e)
+            {
+
+                Console.WriteLine(e.Message);
+            }
+            
+
+            Console.WriteLine("0-Atras");
+            if (Console.ReadLine() == "0")
+            {
+                Console.Clear();
+                MenuPrincipal();
+            }
+            
+        }
+        public static void PartidoConMasGoles() 
+        {
+            Sistema sistema = Sistema.GetInstancia();
+            Console.Clear();
+            Console.WriteLine("Ingrese el nombre de la seleccion");
+            Seleccion seleccion = sistema.GetSeleccion(Console.ReadLine());
+            List<Partido> PartidosMasGoles = sistema.GetPartidoConMasGoles(seleccion);
+            try
+            {
+                if(seleccion == null)
+                {
+                    throw new Exception("La seleccion ingresada no existe");
+                }
+                if (PartidosMasGoles.Count == 0)
+                {
+                    throw new Exception("No se encontraron registros");
+                }
+                
+                foreach(Partido p in PartidosMasGoles) 
+                {
+                    Console.WriteLine($"{p.Seleccion1.Pais_.Nombre} contra {p.Seleccion2.Pais_.Nombre} Cantidad de goles: {p.GetCantidadDeGoles()}");
+                }
+
+            }
+            catch (Exception e)
+            {
+
+                Console.WriteLine(e.Message);
+            }
+
+        }
+
+        public static void ListarJugadoresConGol()
+        {
+            Sistema sistema = Sistema.GetInstancia();
+            Console.Clear();
+            Console.WriteLine("Ingrese el id de un partido");
+            int idPartido = Int32.Parse(Console.ReadLine());
+            List<Jugador> JugadoresConGol = sistema.GetJugadoresConGolEnPartido(idPartido);
+
+            try
+            {
+                if(sistema.GetPartido(idPartido) == null)
+                {
+                    throw new Exception("El partido ingresado no existe");
+                }
+                if(JugadoresConGol.Count == 0)
+                {
+                    throw new Exception("No hubo goles en el partido");
+                }
+
+
+                Console.WriteLine($"Id del partido: {sistema.GetPartido(idPartido).Id} || Seleccion 1: {sistema.GetPartido(idPartido).Seleccion1.Pais_.Nombre} || Seleccion 2: {sistema.GetPartido(idPartido).Seleccion2.Pais_.Nombre}");
+                Console.WriteLine("Jugadores que metieron gol: ");
+                foreach(Jugador j in JugadoresConGol)
+                {
+                    Console.WriteLine($"Nombre: {j.NombreCompleto} || Valor de mercado: {j.ValorMercado} || Categoria Financiera: {j.VerCategoriaFinanciera()}");
+                }
+
+
+            }
+            catch (Exception e)
+            {
+             
+                Console.WriteLine(e.Message);
+            }
+
+            Console.WriteLine("0-Atras");
+            if (Console.ReadLine() == "0")
+            {
+                Console.Clear();
+                MenuPrincipal();
+            }
+
 
         }
     }

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Clases
 {
-    public class Jugador : IValidacion
+    public class Jugador : IValidacion, IComparable, IComparer<Jugador>
     {
         public int Id { get; set; }
         public string NombreCompleto { get; set; }
@@ -54,5 +54,52 @@ namespace Clases
             return obj is Jugador jugador && jugador.Id == this.Id;
         }
 
+
+        public string VerCategoriaFinanciera()
+        {
+            if(ValorMercado >= Jugador.MontoCategoria)
+            {
+                return "vip";
+            }
+            else
+            {
+                return "estandar";
+            }
+        }
+        public int CompareTo(object obj)
+        {
+            Jugador jugadorOtro = (Jugador)obj;
+
+            if(ValorMercado.CompareTo(jugadorOtro.ValorMercado) >0)
+            {
+                return -1;
+            }
+            else if (ValorMercado.CompareTo(jugadorOtro.ValorMercado) <0)
+            {
+                return 1;
+            }
+            else
+            {
+                return Compare(this, jugadorOtro);
+            }
+
+      
+        }
+
+        public int Compare(Jugador x, Jugador y)
+        {
+            if (x.NombreCompleto.CompareTo(y.NombreCompleto) < 0)
+            {
+                return -1;
+            }
+            if (x.NombreCompleto.CompareTo(y.NombreCompleto) > 0)
+            {
+                return 1;
+            }
+            else
+            {
+                return 0;
+            }
+        }
     }
 }

@@ -41,6 +41,19 @@ namespace Clases
             }
         }
 
+        public int GetCantidadDeGoles()
+        {
+            int contadorGoles = 0;
+            foreach (Incidencia i in Incidencias)
+            {
+                if (i.Tipo == EnumIncidencia.Gol)
+                {
+                    contadorGoles++;
+                }
+            }
+            return contadorGoles;
+        }
+
         public override bool Equals(object obj)
         {
             return obj is Partido partido && partido.Id == this.Id;

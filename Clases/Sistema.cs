@@ -12,7 +12,7 @@ namespace Clases
         private List<Pais> Paises = new List<Pais>();
         private List<Partido> Partidos = new List<Partido>();
         private List<Resenia> Resenias = new List<Resenia>();
-        public List<Periodista> Periodistas = new List<Periodista>();
+        private List<Periodista> Periodistas = new List<Periodista>();
 
 
         private Sistema()
@@ -110,6 +110,85 @@ namespace Clases
             }
             return PartidosJugador;
         }
+
+        public List<Jugador> GetJugadoresExpulsados()
+        {
+            List<Jugador> listaRetorno = new List<Jugador>();
+
+            foreach(Partido p in Partidos)
+            {
+                foreach (Incidencia i in p.Incidencias)
+                {
+                    if(i.Tipo == EnumIncidencia.Roja)
+                    {
+                        if (!listaRetorno.Contains(i.Jugador))
+                        {
+                            listaRetorno.Add(i.Jugador);
+                        }
+
+                    }
+
+
+                }
+
+
+            }
+            return listaRetorno;
+        }
+        public List<Jugador> GetJugadoresConGolEnPartido(int idPartido)
+        {
+            List<Jugador> listaRetorno = new List<Jugador>();
+            Partido partido = GetPartido(idPartido);
+
+            foreach (Incidencia i in partido.Incidencias)
+            {
+                if (i.Tipo == EnumIncidencia.Gol)
+                {
+                    if (!listaRetorno.Contains(i.Jugador))
+                    {
+                        listaRetorno.Add(i.Jugador);
+                    }
+
+                }
+
+
+            }
+
+            return listaRetorno;
+        }
+        public List<Partido> GetPartidoConMasGoles(Seleccion s)
+        {
+            List<Partido> retorno = new List<Partido>();
+            foreach(Partido p in Partidos)
+            {
+                if (p.Seleccion1.Equals(s) || p.Seleccion2.Equals(s))
+                {
+                   if(retorno.Count == 0)
+                    {
+                        retorno.Add(p);
+                    }
+                    else
+                    {
+                        foreach(Partido pt in retorno)
+                        {
+                            if (p.GetCantidadDeGoles().CompareTo(pt.GetCantidadDeGoles()) > 0)
+                            {
+                                retorno.Clear();
+                                retorno.Add(p);
+                            }
+                            else if(p.GetCantidadDeGoles().CompareTo(pt.GetCantidadDeGoles()) == 0)
+                            {
+                                retorno.Add(p);
+                            }
+                        }
+                    }
+        
+
+                }
+            }
+            return retorno;
+        }
+            
         private Pais GetPais(string nombre)
         {
             foreach (Pais pais in Paises)
@@ -122,7 +201,19 @@ namespace Clases
             }
             return null;
         }
-        private Seleccion GetSeleccion(string nombrePais)
+        public Partido GetPartido(int id)
+        {
+            foreach (Partido p in Partidos)
+            {
+                if (p.Id.Equals(id))
+                {
+                    return p;
+                }
+
+            }
+            return null;
+        }
+        public Seleccion GetSeleccion(string nombrePais)
         {
             foreach(Seleccion seleccion in Selecciones)
             {
@@ -1108,13 +1199,6 @@ namespace Clases
 
 
         }
-
-        private void RegistrarIncidencia()
-        {
-
-        }
-
-
 
         private List<Jugador> JugadoresDe(Pais p)
         {
