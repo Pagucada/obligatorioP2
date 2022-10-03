@@ -110,7 +110,9 @@ namespace Clases
             }
             return PartidosJugador;
         }
-
+        public void SetCatFinanciera(int nuevoValor) {
+            Jugador.MontoCategoria = nuevoValor;
+        }
         public List<Jugador> GetJugadoresExpulsados()
         {
             List<Jugador> listaRetorno = new List<Jugador>();

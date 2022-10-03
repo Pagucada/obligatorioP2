@@ -7,10 +7,10 @@ namespace obligatorioCodFuente
 {
     class Program
     {
-       
+        public static Sistema sistema = Sistema.GetInstancia();
         static void Main(string[] args)
         {
-             Sistema sistema = Sistema.GetInstancia();
+            
              MenuPrincipal();
         }
 
@@ -53,7 +53,7 @@ namespace obligatorioCodFuente
         public static void AgregarPeriodista()
         {
             
-            Sistema sistema = Sistema.GetInstancia();
+           
             Console.Clear();
             
             Console.WriteLine("Ingrese nombre del periodista");
@@ -100,7 +100,7 @@ namespace obligatorioCodFuente
                 {
                     throw new Exception("El valor debe ser mayor a 0");
                 }
-                Jugador.MontoCategoria = NuevoValor;
+                sistema.SetCatFinanciera(NuevoValor);
                 Console.WriteLine("El monto fue asignado exitosamente");
             }
             catch (Exception e)
@@ -119,7 +119,7 @@ namespace obligatorioCodFuente
 
         public static void ListarPartidosDeJugador()
         {
-            Sistema sistema = Sistema.GetInstancia();
+            
             Console.Clear();
             Console.WriteLine("Ingrese el id de un jugador");
             int IdJugador = Int32.Parse(Console.ReadLine());
@@ -172,7 +172,7 @@ namespace obligatorioCodFuente
         }
         public static void ListarJugadoresExpulsados()
         {
-            Sistema sistema = Sistema.GetInstancia();
+            
             Console.Clear();
             List<Jugador> JugadoresExpulsados = sistema.GetJugadoresExpulsados();
             JugadoresExpulsados.Sort();
@@ -205,7 +205,7 @@ namespace obligatorioCodFuente
         }
         public static void PartidoConMasGoles() 
         {
-            Sistema sistema = Sistema.GetInstancia();
+           
             Console.Clear();
             Console.WriteLine("Ingrese el nombre de la seleccion");
             Seleccion seleccion = sistema.GetSeleccion(Console.ReadLine());
@@ -243,7 +243,7 @@ namespace obligatorioCodFuente
 
         public static void ListarJugadoresConGol()
         {
-            Sistema sistema = Sistema.GetInstancia();
+            
             Console.Clear();
             Console.WriteLine("Ingrese el id de un partido");
             int idPartido = Int32.Parse(Console.ReadLine());
