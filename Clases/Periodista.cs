@@ -26,9 +26,12 @@ namespace Clases
 
 
 
+        public override bool Equals(object obj)
+        {
+            return obj is Periodista periodista && periodista.Email == Email;    
+        }
 
-
-         public void ValidarDatos()
+        public void ValidarDatos()
         {
             if(string.IsNullOrEmpty(Nombre) == true || string.IsNullOrEmpty(Apellido) == true || string.IsNullOrEmpty(Email) == true || string.IsNullOrEmpty(Contrasenia) == true)
             {

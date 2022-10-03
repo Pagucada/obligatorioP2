@@ -17,7 +17,7 @@ namespace obligatorioCodFuente
         public static void MenuPrincipal()
         {
             Console.WriteLine("0-Salir\n1-Agregar Periodista\n2-Asignar el valor de categoria financiera para los jugadores" +
-                "\n3-Listar partidos de un jugador\n4-Listar Jugadores expulsados\n5-Mostrar partido con mas goles de una seleccion\n6-Listar jugadores con gol");
+                "\n3-Listar partidos de un jugador\n4-Listar Jugadores expulsados\n5-Mostrar partido con mas goles de una seleccion\n6-Listar jugadores con gol en un partido");
             int seleccion = Int32.Parse(Console.ReadLine());
 
                switch (seleccion)
@@ -231,6 +231,12 @@ namespace obligatorioCodFuente
             {
 
                 Console.WriteLine(e.Message);
+            }
+            Console.WriteLine("0-Atras");
+            if (Console.ReadLine() == "0")
+            {
+                Console.Clear();
+                MenuPrincipal();
             }
 
         }

@@ -15,3 +15,8 @@ C:\Users\Nacho\OneDrive\Documentos\GitHub\obligatorioP2\Clases\obj\Debug\netstan
 C:\Users\Nacho\OneDrive\Documentos\GitHub\obligatorioP2\Clases\obj\Debug\netstandard2.0\Clases.AssemblyInfo.cs
 C:\Users\Nacho\OneDrive\Documentos\GitHub\obligatorioP2\Clases\obj\Debug\netstandard2.0\Clases.csproj.CoreCompileInputs.cache
 >>>>>>> Stashed changes
+C:\Users\Nacho\OneDrive\Documentos\GitHub\obligatorioP2\Clases\bin\Debug\netstandard2.0\Clases.deps.json
+C:\Users\Nacho\OneDrive\Documentos\GitHub\obligatorioP2\Clases\bin\Debug\netstandard2.0\Clases.dll
+C:\Users\Nacho\OneDrive\Documentos\GitHub\obligatorioP2\Clases\bin\Debug\netstandard2.0\Clases.pdb
+C:\Users\Nacho\OneDrive\Documentos\GitHub\obligatorioP2\Clases\obj\Debug\netstandard2.0\Clases.dll
+C:\Users\Nacho\OneDrive\Documentos\GitHub\obligatorioP2\Clases\obj\Debug\netstandard2.0\Clases.pdb
