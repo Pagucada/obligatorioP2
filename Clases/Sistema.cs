@@ -23,7 +23,7 @@ namespace Clases
             PrecargaSelecciones();
             PrecargaPartidos();
         }
-
+        //Singleton
         public static Sistema GetInstancia() { 
         if(Instancia == null)
            {
@@ -77,6 +77,7 @@ namespace Clases
             }      
            
         }
+        //Para obtener la lista privada Jugadores sin acceder al puntero de memoria
         public List<Jugador> GetJugadores()
         {
             List<Jugador> jugadores = new List<Jugador>();
@@ -87,6 +88,8 @@ namespace Clases
             }
             return jugadores;
         }
+
+        //Recibe el id de un jugador y devuelve una lista de los partidos en los que participo o tira una Exeption en caso de error
         public List<Partido> GetPartidosJugador(int idJugador)
         {
             List<Partido> PartidosJugador = new List<Partido>();
@@ -110,9 +113,13 @@ namespace Clases
             }
             return PartidosJugador;
         }
+
+        //Recibe un valor y setea el monto que define la categoria financiera de los Jugadores 
         public void SetCatFinanciera(int nuevoValor) {
             Jugador.MontoCategoria = nuevoValor;
         }
+
+        //Retorna todos los jugadores que recibieron una tarjeta roja
         public List<Jugador> GetJugadoresExpulsados()
         {
             List<Jugador> listaRetorno = new List<Jugador>();
@@ -137,6 +144,8 @@ namespace Clases
             }
             return listaRetorno;
         }
+
+        //Recibe el id de un partido y retorna una lista de los jugadores que metieron gol en el partido con ese id
         public List<Jugador> GetJugadoresConGolEnPartido(int idPartido)
         {
             List<Jugador> listaRetorno = new List<Jugador>();
@@ -158,6 +167,7 @@ namespace Clases
 
             return listaRetorno;
         }
+        //Recibe una seleccion y retorna el o los partidos con mas goles en los que haya participado
         public List<Partido> GetPartidoConMasGoles(Seleccion s)
         {
             List<Partido> retorno = new List<Partido>();
@@ -190,7 +200,7 @@ namespace Clases
             }
             return retorno;
         }
-            
+        //Recibe el nombre de un pais y retorna el objeto Pais con ese nombre
         private Pais GetPais(string nombre)
         {
             foreach (Pais pais in Paises)
@@ -203,6 +213,7 @@ namespace Clases
             }
             return null;
         }
+        //Recibe el id de un partido y retorna el objeto Partido con ese Id
         public Partido GetPartido(int id)
         {
             foreach (Partido p in Partidos)
@@ -215,6 +226,8 @@ namespace Clases
             }
             return null;
         }
+
+        //Recibe el nombre de un pais y retorna la seleccion asociada a ese pais
         public Seleccion GetSeleccion(string nombrePais)
         {
             foreach(Seleccion seleccion in Selecciones)
@@ -227,6 +240,7 @@ namespace Clases
             }
             return null;
         }
+
 
         private void PrecargaJugadores()
         {
@@ -1136,8 +1150,7 @@ namespace Clases
         {
             
 
-             //Partido de eliminatorias
-
+             //Partido de eliminatoria
             AltaPartido(new PartidoEliminatoria(GetSeleccion("Catar"), GetSeleccion("Inglaterra"), DateTime.Parse("2022,11,29"), true, true, Etapa.octavos));
             AltaPartido(new PartidoEliminatoria(GetSeleccion("Ecuador"), GetSeleccion("Gales"), DateTime.Parse("2022,11,30"), false, false, Etapa.octavos));
             AltaPartido(new PartidoEliminatoria(GetSeleccion("Argentina"), GetSeleccion("Australia"), DateTime.Parse("2022,12,1"), true, true, Etapa.octavos));
@@ -1182,6 +1195,10 @@ namespace Clases
                     {
                         maxTime = 120;
                         partido.AltaIncidencia(new Incidencia(EnumIncidencia.Gol, rnd.Next(1, 90).ToString(), partido.Seleccion1.Jugadores[rnd.Next(1, 11)]));
+                        if(partidoE.TandaPenales == false)
+                        {
+                            partido.AltaIncidencia(new Incidencia(EnumIncidencia.Gol, rnd.Next(1, maxTime).ToString(), partido.Seleccion2.Jugadores[rnd.Next(1, 11)]));
+                        }
                     }
                     partido.AltaIncidencia(new Incidencia(EnumIncidencia.Amarilla, rnd.Next(1, maxTime).ToString(), partido.Seleccion1.Jugadores[rnd.Next(1, 11)]));
                     partido.AltaIncidencia(new Incidencia(EnumIncidencia.Gol, rnd.Next(1, 90).ToString(), partido.Seleccion2.Jugadores[rnd.Next(1, 11)]));
@@ -1210,7 +1227,7 @@ namespace Clases
 
 
         }
-
+        //Retorna todos los jugadores de una selección, a partir del país del jugador.
         private List<Jugador> JugadoresDe(Pais p)
         {
             List<Jugador> _misJugadores = new List<Jugador>();
@@ -1225,6 +1242,7 @@ namespace Clases
             return _misJugadores;
         }
 
+        //Agrega un periodista a la lista del sistema o tira Exeption en caso de error
         public void AltaPeriodista(Periodista p)
         {
             try
@@ -1249,6 +1267,7 @@ namespace Clases
                 throw;
             }
         }
+        //Agrega un jugador a la lista del sistema o tira Exeption en caso de error
         public void AltaJugador(Jugador j)
         {
             try
@@ -1266,6 +1285,7 @@ namespace Clases
             }
             
         }
+        //Agrega un pais a la lista del sistema o tira Exeption en caso de error
         public void AltaPais(Pais p)
         {
             try
@@ -1282,6 +1302,7 @@ namespace Clases
                 throw;
             }
         }
+        //Agrega una seleccion a la lista del sistema o tira Exeption en caso de error
         public void AltaSeleccion(Seleccion s) 
         {
             s.ValidarDatos();
@@ -1290,6 +1311,7 @@ namespace Clases
                 Selecciones.Add(s);
             }
         }
+        //Agrega un partido a la lista del sistema o tira Exeption en caso de error
         public void AltaPartido(Partido p)
         {
             try

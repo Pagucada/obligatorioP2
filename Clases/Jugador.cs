@@ -54,7 +54,7 @@ namespace Clases
             return obj is Jugador jugador && jugador.Id == this.Id;
         }
 
-
+        //Devuelve la categoria financiera de un Jugador segun el monto establecido por el usuario
         public string VerCategoriaFinanciera()
         {
             if(ValorMercado >= Jugador.MontoCategoria)
@@ -66,6 +66,7 @@ namespace Clases
                 return "estandar";
             }
         }
+        //Metodos para ordenar listas de jugadores con .sort()
         public int CompareTo(object obj)
         {
             Jugador jugadorOtro = (Jugador)obj;
@@ -85,7 +86,7 @@ namespace Clases
 
       
         }
-
+        //Metodos para ordenar listas de jugadores con .sort() por un segundo criterio
         public int Compare(Jugador x, Jugador y)
         {
             if (x.NombreCompleto.CompareTo(y.NombreCompleto) < 0)

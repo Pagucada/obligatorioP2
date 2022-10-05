@@ -49,7 +49,7 @@ namespace obligatorioCodFuente
         }
 
        
-
+        //Recibe los datos de un nuevo periodista por consola y hace el alta, en caso de error muestra Exeption
         public static void AgregarPeriodista()
         {
             
@@ -88,7 +88,7 @@ namespace obligatorioCodFuente
             
             
         }
-
+        //Recibe por consola el nuevo valor de la categotia financiera y lo actualiza llamando a sistema
         public static void AsignarValorCatFinanciera()
         {
             Console.Clear();
@@ -116,7 +116,7 @@ namespace obligatorioCodFuente
                 MenuPrincipal();
             }
         }
-
+        //Recibe por consola el id de un Jugador y muestra todos los partidos en los que participo
         public static void ListarPartidosDeJugador()
         {
             
@@ -170,6 +170,8 @@ namespace obligatorioCodFuente
             }
 
         }
+
+        //Muestra todos los jugadores expulsados de manera ordenada segun la letra del obligatorio
         public static void ListarJugadoresExpulsados()
         {
             
@@ -203,6 +205,7 @@ namespace obligatorioCodFuente
             }
             
         }
+        //Recibe por consola el nombre de una seleccion y muestra el partido con mas goles en el que haya participado
         public static void PartidoConMasGoles() 
         {
            
@@ -240,7 +243,7 @@ namespace obligatorioCodFuente
             }
 
         }
-
+        //Recibe por consola el id de un partido y muestra todos los jugadores que hayan metido un gol en el mismo
         public static void ListarJugadoresConGol()
         {
             

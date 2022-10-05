@@ -6,7 +6,7 @@ namespace Clases
 {
     public class PartidoEliminatoria:Partido
     {
-        public string Ganador { get; set; }
+        public string Ganador { get; set; } = "Pendiente";
         public bool Alargue { get; set; }
         public bool TandaPenales { get; set; }
         public Etapa Etapa { get; set; }
@@ -23,6 +23,8 @@ namespace Clases
         {
             base.ValidarDatos();
         }
+
+        //Da de alta una nueva incidencia
         public override void AltaIncidencia(Incidencia i)
         {
             try
@@ -37,6 +39,8 @@ namespace Clases
             }
 
         }
+
+        //Valida una incidencia
         public override void ValidarIncidencia(Incidencia i)
         {
             bool jugadorPertenece = false;

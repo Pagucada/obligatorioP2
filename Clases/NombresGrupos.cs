@@ -6,6 +6,7 @@ namespace Clases
 {
     public enum NombresGrupos
     {
+        //grupos de la fase de grupos
         A=1,
         B=2,
         C=3,

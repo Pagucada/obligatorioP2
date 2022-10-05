@@ -23,6 +23,8 @@ namespace Clases
 
             }
         }
+
+        //Da de alta una nueva incidencia
         public override void AltaIncidencia(Incidencia i)
         {
             try
@@ -38,6 +40,7 @@ namespace Clases
 
         }
 
+        //Valida una incidencia
         public override void ValidarIncidencia(Incidencia i)
         {
             bool jugadorPertenece = false;

@@ -40,7 +40,7 @@ namespace Clases
                 throw new Exception("La fecha está ingresada en un rango que no corresponde.");
             }
         }
-
+        //Devuelve la cantidad de goles en un Partido
         public int GetCantidadDeGoles()
         {
             int contadorGoles = 0;
@@ -58,11 +58,11 @@ namespace Clases
         {
             return obj is Partido partido && partido.Id == this.Id;
         }
-
+        //Define metodos abstractos para dar de alta y validar las incidencias de el partido
         public abstract void AltaIncidencia(Incidencia i);
        
         public abstract void ValidarIncidencia(Incidencia i);
     
         }
-    }
+}
 

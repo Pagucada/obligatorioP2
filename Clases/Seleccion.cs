@@ -24,6 +24,7 @@ namespace Clases
             }
         }
 
+        //Agrega un nuevo jugador a la seleccion si esta NO lo contiene
         public void AgregarJugador(Jugador j)
         {
             if (!Jugadores.Contains(j))
